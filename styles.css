@@ -1,0 +1,512 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+
+/* navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #004cafc0;
+  padding: 25px;
+}
+
+.navbar .logo a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px;
+  transition: 0.3s;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 88px;
+    left: 0;
+    background-color: #004cafc0;
+    padding: 20px;
+  }
+
+  .nav-links li {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+}
+
+
+/* Home Section */
+.home {
+    height: 100vh;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.home h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.home span {
+    color: #004caf;
+}
+
+.home p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.cta-btn {
+    background-color: #004caf;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+
+/* About Me Section */
+.about-me {
+  padding: 80px 0;
+  background-color: #fff;
+  text-align: center;
+}
+
+.about-me .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Flexbox Layout for About Me */
+.about-content {
+  display: flex;
+  flex-wrap: wrap; /* Make it responsive */
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Left: Profile Image */
+.profile {
+  flex: 1;
+  padding-right: 20px; /* Space between image and text */
+}
+
+.profile-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 50px;
+}
+
+/* Right: Personal Information */
+.info {
+  flex: 2;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+}
+
+.info h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #004caf;
+  text-align: left;
+}
+
+.info .role {
+  font-size: 1.5rem;
+  color: #3498db;
+  margin-bottom: 15px;
+}
+
+.info .bio {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.info .btn {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .profile {
+    padding-right: 0;
+  }
+
+  .profile-image {
+    max-width: 200px;
+  }
+
+  .info {
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .info h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .info .role {
+    font-size: 1.3rem;
+  }
+
+  .info .bio {
+    font-size: 1rem;
+  }
+
+  .info .btn {
+    font-size: 1rem;
+    padding: 12px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .info .bio {
+    font-size: 0.9rem;
+  }
+
+  .info .btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}
+
+
+
+/* General Skills Section */
+.skills {
+    padding: 80px 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.skills .container {
+    width: 90%;
+    margin: auto;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Auto-adjust columns */
+    gap: 20px;
+    justify-items: center;
+}
+
+/* Each individual skill */
+.skill img {
+    border-radius: 0%;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+    width: 100%; /* Make image fit the container */
+    height: 100px; /* Fixed height */
+    object-fit: cover; /* Ensure image covers the area without distortion */
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+
+    .skill img {
+        width: 60px; /* Adjust image size on smaller screens */
+        height: 60px;
+    }
+}
+
+
+
+
+
+
+/* Projects Section */
+.projects {
+    background-color: #f4f4f4;
+    padding: 80px 0;
+}
+
+.projects .container {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+.projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between cards */
+    grid-auto-rows: minmax(200px, auto);
+}
+
+.project-card {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.project-card a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+}
+
+.project-card a:hover {
+    color: #ff8c27;
+    text-decoration: underline;
+}
+
+/* Styling for Project Image */
+.project-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    max-height: 200px; /* Limit image height */
+}
+
+/* Responsive adjustments for mobile screens */
+@media (max-width: 768px) {
+    .projects h2 {
+        font-size: 2rem;
+    }
+
+    .project-card {
+        padding: 15px;
+    }
+}
+
+
+/* Contact Section */
+.contact {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.contact .container {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.contact-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.social-links,
+.contact-form {
+    flex: 1;
+}
+
+.social-links h3,
+.contact-form h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.social-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.social-links ul li {
+    margin: 10px 0;
+}
+
+.social-links ul li a {
+    text-decoration: none;
+    color: #3498db;
+    font-size: 1.2rem;
+}
+
+.social-links ul li a:hover {
+    color: #e67e22;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.contact-form label {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #2980b9;
+}
+
+.thank-you-message {
+    font-size: 1.2rem;
+    color: #2ecc71;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .social-links ul {
+        padding-left: 0;
+    }
+    
+    .contact-form {
+        width: 100%;
+    }
+}
+
+
+/* Footer */
+.footer {
+    background-color: #004cafc0;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
