@@ -45,8 +45,6 @@
           <li><a href="#about-me">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#contact">Contact</a></li>
-          <button id="themeToggle">Switch to Dark Mode</button>
-
         </ul>
         <div class="hamburger">
           <span></span>
@@ -56,7 +54,7 @@
       </nav>
 
     <!-- Home Section -->
-    <section class="home" id="home">
+    <section class="home dark-mode" id="home">
         <div class="container">
             <h1>Hi, I'm <span>Varun.</span></h1>
             <p>A Full-Stack Developer, passionate about building dynamic web apps.</p>
@@ -144,13 +142,13 @@
             </div>
             <div class="project-card">
                 <img src="images/game.jpg" alt="Games Website" class="project-img">
-                <h3>Portfolio Website</h3>
+                <h3>Game-Zone Website</h3>
                 <p>This is a basic game website built using HTML, CSS, and JavaScript to showcase my work and skills.</p>
                 <a href="https://varunnayu.github.io/games/">View Project</a>
             </div>
             <div class="project-card">
                 <img src="images/e-comm.jpg" alt="Clothstore.in" class="project-img">
-                <h3>Cloth-store(e-commerece)</h3>
+                <h3>Cloth e-commerece</h3>
                 <p>A E-commerece website build with frontend cart management</p>
                 <a href="https://varunnayu.github.io/clothing.in/">View Project</a>
             </div>
@@ -161,10 +159,10 @@
                 <a href="#">View Project</a>
             </div>
             <div class="project-card">
-                <img src="images/weather-app.jpg" alt="Weather App" class="project-img">
-                <h3>Weather App</h3>
-                <p>A weather application that pulls data from an external API and displays weather forecasts.</p>
-                <a href="#">View Project</a>
+                <img src="images/money.jpg" alt="budget App" class="project-img">
+                <h3>Expense Tracker</h3>
+                <p>A Expense Tracker website where u can add the income and expense that you have spend.</p>
+                <a href="https://varunnayu.github.io/budget/">View Project</a>
             </div>
             <div class="project-card">
                 <img src="images/blog.jpg" alt="Blog Website" class="project-img">
@@ -198,34 +196,32 @@
                     <li><a href="https://github.com" target="_blank">GitHub</a></li>
                     <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
                     <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
-                    <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
                 </ul>
             </div>
 
             <!-- Right Column: Contact Form -->
             <div class="contact-form">
-                <h3>Send a Message</h3>
-                <form id="contactForm" action="#" method="post" onsubmit="return submitForm()">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="4" required></textarea>
-                    </div>
-                    <button type="submit" class="btn">Submit</button>
-                </form>
-                <p id="thankYouMessage" class="thank-you-message" style="display: none;">Thank you for your message!</p>
-            </div>
-        </div>
+              <h3>Send a Message</h3>
+              <form id="contactForm">
+                  <div class="form-group">
+                      <label for="name">Name</label>
+                      <input type="text" id="name" name="name" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="email">Email</label>
+                      <input type="email" id="email" name="email" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="message">Message</label>
+                      <textarea id="message" name="message" rows="4" required></textarea>
+                  </div>
+                  <button type="submit" class="btn">Submit</button>
+              </form>
+              <p id="thankYouMessage" class="thank-you-message" style="display: none;">Thank you for your message!</p>
+          </div>
+                   
     </div>
 </section>
-
 
 
 <!-- Footer -->
@@ -236,5 +232,7 @@
 </footer>
 
 <script src="script.js"></script>
+
+
 </body>
 </html>
