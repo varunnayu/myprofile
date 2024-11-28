@@ -1,3 +1,4 @@
+
 /* General Styles */
 * {
     margin: 0;
@@ -71,12 +72,21 @@ h2 {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #004caf;
+  }
+
   .nav-links {
     display: none;
     flex-direction: column;
     width: 100%;
     position: absolute;
-    top: 88px;
+    top: 60px; /* Adjust based on the navbar height */
     left: 0;
     background-color: #004cafc0;
     padding: 20px;
@@ -94,7 +104,6 @@ h2 {
   .nav-links.active {
     display: flex;
   }
-
 }
 
 
@@ -502,11 +511,15 @@ h2 {
     }
 }
 
-
 /* Footer */
 .footer {
     background-color: #004cafc0;
     color: white;
     text-align: center;
     padding: 20px;
+}
+
+img {
+  pointer-events: none;
+  user-select: none;
 }
